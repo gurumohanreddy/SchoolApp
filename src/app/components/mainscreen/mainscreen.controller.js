@@ -15,4 +15,5 @@ myApp.controller('mainscreencontroller',['homescreenservice',function(homescreen
               mainscreen.screens = homescreenservice.getdata();
             }
             getthings();
+            
 }]);

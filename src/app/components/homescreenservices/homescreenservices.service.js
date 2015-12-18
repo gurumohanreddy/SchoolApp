@@ -3,22 +3,28 @@ myApp.service('homescreenservice',function(){
             this.getdata = function(){
               var data = [
                 {
-                  'title': 'Manage Student'
+                  'title': 'Manage Student',
+                  'link': 'managestudent'
                 },
                 {
-                  'title':'Manage Class'
+                  'title':'Manage Class',
+                  'link': 'manageclass'
                 },
                 {
-                  'title':'Teachers'
+                  'title':'Teachers',
+                  'link': 'teachers'
                 },
                 {
-                  'title': 'Parents'
+                  'title': 'Parents',
+                  'link': 'parents'
                 },
                 {
-                  'title': 'Features'
+                  'title': 'Features',
+                  'link': 'features'
                 },
                 {
-                  'title': 'Notifications'
+                  'title': 'Notifications',
+                  'link':'notifications'
                 }
               ];
 

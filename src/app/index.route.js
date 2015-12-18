@@ -33,6 +33,12 @@ myApp.config(function($stateProvider,$urlRouterProvider){
          templateUrl:'app/components/mainscreen/mainscreen.html',
          controller:'mainscreencontroller',
          controllerAs:'mainscreen'
+       })
+       .state('managestudent',{
+         url:'/managestudent',
+         templateUrl:'app/components/managestudent/managestudent.html',
+         controller:'managestudentcontroller',
+         controllerAs:'managestudent'
        });
 
 });
