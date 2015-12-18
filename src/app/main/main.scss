@@ -8,9 +8,21 @@
 .btn{
   background-color: #2ecc71;
 }
-// .well{
-//   background-color: #78CDE0;
-// }
+
+#login{
+  background-image: url('/assets/images/background.jpg');
+  width:100vw;
+  height: 100vh;
+  background-position:center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.well{
+  background-color: #7f8c8d;
+}
 // #logintitle{
 //   padding-top: 10px;
 //   text-align: center;
