@@ -38,13 +38,27 @@
 //   }
 // })();
 
-myApp.controller('MainController',['$location',function($location){
+//this service is store the username and password for the next page
+myApp.service('credentials',function(){
+    this.username = "";
+    this.password = "";
+})
+myApp.controller('MainController',['$location','credentials',function($location,credentials){
           var vm = this;
-          vm.username = "";
-          vm.password = "";
+          // vm.username = credentials.username;
+          // vm.password = credentials.password;
 
           vm.login = function(){
-              $location.path('/mainscreen');
+
+              console.log(vm.username);
+              console.log(vm.password);
+              if(vm.username && vm.password === "guru")
+              {
+                          $location.path('/mainscreen');
+              }
+              else{
+                alert('Login Failed');
+              }
           }
 
 }]);

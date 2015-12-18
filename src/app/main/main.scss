@@ -1,12 +1,14 @@
-.row{
+.login{
   position: absolute;
     margin:auto;
     top: 50%;
     transform: translateY(-50%);
 
   }
-.btn{
+.loginbtn{
   background-color: #2ecc71;
+  color: #FFF;
+  // font-size: 10px;
 }
 
 #login{
@@ -22,6 +24,7 @@
 
 .well{
   background-color: #7f8c8d;
+
 }
 // #logintitle{
 //   padding-top: 10px;

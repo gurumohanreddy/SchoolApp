@@ -1,6 +1,6 @@
 <!-- <acme-navbar></acme-navbar> -->
 <div id="login">
-<div class="row">
+<div class="row login">
   <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-12 col-xs-12 well">
 <br>
         <form ng-submit = "main.login()">
@@ -8,7 +8,7 @@
 
               <div class="input-group">
               <span class="input-group-addon" id="basic-addon1"><i class="glyphicon glyphicon-user"></i></span>
-              <input type="text" class="form-control" placeholder="Username" ng-model="main.username"></div>
+              <input type="text" class="form-control" placeholder="Username" autofocus ng-model="main.username"></div>
               <br>
               <div class="input-group">
               <span class="input-group-addon" id="basic-addon1"><i class="glyphicon glyphicon-lock"></i></span>
@@ -16,7 +16,7 @@
             </div>
 
             </div>
-                <input type ="submit" class="btn btn-group btn-group-justified" value="Login" >
+                <input type ="submit" class=" loginbtn btn btn-group btn-group-justified" value="LOGIN" >
         </form>
 
   </div>
