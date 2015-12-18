@@ -38,6 +38,13 @@
 //   }
 // })();
 
-myApp.controller('MainController',[function(){
+myApp.controller('MainController',['$location',function($location){
+          var vm = this;
+          vm.username = "";
+          vm.password = "";
+
+          vm.login = function(){
+              $location.path('/mainscreen');
+          }
 
 }]);

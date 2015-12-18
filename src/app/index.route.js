@@ -27,6 +27,12 @@ myApp.config(function($stateProvider,$urlRouterProvider){
          templateUrl:'app/main/main.html',
          controller:'MainController',
          controllerAs:'main'
+       })
+       .state('mainscreen',{
+         url:'/mainscreen',
+         templateUrl:'app/components/mainscreen/mainscreen.html',
+         controller:'mainscreencontroller',
+         controllerAs:'mainscreen'
        });
 
 });
