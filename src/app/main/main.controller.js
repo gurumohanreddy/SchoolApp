@@ -43,7 +43,7 @@ myApp.service('credentials',function(){
     this.username = "";
     this.password = "";
 })
-myApp.controller('MainController',['$location','credentials',function($location,credentials){
+myApp.controller('MainController',['$state','credentials',function($state,credentials){
           var vm = this;
           // vm.username = credentials.username;
           // vm.password = credentials.password;
@@ -54,10 +54,13 @@ myApp.controller('MainController',['$location','credentials',function($location,
               console.log(vm.password);
               if(vm.username && vm.password === "guru")
               {
-                          $location.path('/mainscreen');
+                          $state.go('mainscreen');
+
               }
               else{
                 alert('Login Failed');
+                vm.username = "";
+                vm.password="";
               }
           }
 

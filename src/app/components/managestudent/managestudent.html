@@ -1,38 +1,44 @@
 <acme-navbar></acme-navbar>
 
-<div class="row">
+<!-- <div class="row"> -->
+  <h3 class ="text_align">Add student</h3>
   <div class="col-md-6 col-md-offset-3">
-    <form class=" well">
-  <h3>Add student</h3>
-    <div class="form-group">
-      <label for="studentname">Student Name</label>
-      <input type="email" class="form-control" id="studentname" placeholder="Student Name">
-    </div>
-    <div class="form-group">
-      <label for="parentname">Parent Name</label>
-      <input type="email" class="form-control" id="parentname" placeholder="Parent Name">
-    </div>
-    <div class="form-group">
-      <label for="parentemail">Parent email</label>
-      <input type="email" class="form-control" id="parentemail" placeholder="Parent email">
-    </div>
-    <div class="form-group">
-      <label for="class">Class</label>
-    <select class="form-control" >
-      <option value="Kinder Garten">kinder Garten</option>
-      <option value="LKG">LKG</option>
-      <option value="UKG">UKG</option>
-    </select>
-    </div>
+        <form class=" well" ng-submit="managestudent.addstudent()">
+        <div class="form-group">
+          <label for="studentname">Student Name</label>
+        <input type="text" class="form-control"  placeholder="Student Name" ng-model="managestudent.newstudent.studentname">
+        </div>
+        <div class="form-group">
+          <label for="parentname">Parent Name</label>
+        <input type="text" class="form-control" placeholder="Parent Name" ng-model="managestudent.newstudent.parentname">
+        </div>
+        <div class="form-group">
+          <label for="parentemail">Parent email</label>
+        <input type="email" class="form-control"  placeholder="Parent email" ng-model="managestudent.newstudent.parentemail">
+        </div>
+        <div class="form-group">
+          <label for="class">Class</label>
+        <select class="form-control" ng-model="managestudent.newstudent.studentclass" >
+          <option value="Kinder Garten">kindergarten</option>
+          <option value="LKG">LKG</option>
+          <option value="UKG">UKG</option>
+        </select>
+        </div>
 
-    <div class="form-group">
-    <label for="inputfile">File input</label>
-    <input type="file" id="exampleInputFile">
-  </div>
+        <div class="form-group">
+        <label for="inputfile">Student Pic</label>
+      <input type="file"  ng-model="managestudent.newstudent.studentpic">
+      </div>
+
+        <button type="submit" class="btn btn-default">Submit</button>
 
 
-    <button type="submit" class="btn btn-default">Submit</button>
     </form>
   </div>
 
-</div>
+<!-- </div> -->
+
+
+<!-- <div ng-repeat="x in managestudent.students">
+  <p>{{x.studentname}}</p>
+</div> -->
