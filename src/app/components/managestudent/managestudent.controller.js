@@ -1,18 +1,22 @@
-myApp.controller('managestudentcontroller',[function(){
+myApp.controller('managestudentcontroller',['$localStorage',function($localStorage){
         var managestudent = this;
 
         managestudent.initializenewstudent = function(){
           managestudent.newstudent = {};
         }
+
         managestudent.addstudent = function(){
-            managestudent.students.push(managestudent.newstudent);
-            managestudent.initializenewstudent();
-            console.log(managestudent.students);
+            managestudent.storage.push(managestudent.newstudent);
+             managestudent.initializenewstudent();
+             $('#myModal').modal('toggle');
+             console.log(managestudent.newstudent);
         }
+
 
         managestudent.initializenewstudent();
         managestudent.students = [];
-        // managestudent.newstudent.studentname = "Tingu";
+        $localStorage.storage = $localStorage.storage || [];
+        managestudent.storage = $localStorage.storage;
 
 
 }]);
