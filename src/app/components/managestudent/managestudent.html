@@ -37,7 +37,7 @@
 
           <div class="form-group">
           <label for="inputfile">Student Pic</label>
-        <input type="file"  ng-model="managestudent.newstudent.studentpic">
+        <input type="file" id ="fileinput" >
         </div>
           <hr>
           <button type="submit" class="btn btn-primary ">Submit</button>
@@ -58,5 +58,7 @@
   <p>{{x.parentname}}</p>
     <p>{{x.parentemail}}</p>
       <p>{{x.studentclass}}</p>
-        <p>{{x.studentpic}}</p>
+      <img ng-src={{x.studentpic}} alt="Hello"></div>
+
+      <!-- <p>{{x.studentpic}}</p> -->
 </div>
